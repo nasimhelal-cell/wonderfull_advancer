@@ -1,0 +1,252 @@
+/* global css area start  */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Noto+Sans:wght@300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* color taking  */
+    --primary-bg: #EE1E52;
+    --paragraph-color: #404040;
+    --text-color: #fff;
+
+    /* font size taking  */
+    --fs-p: .9rem;
+    --fs-section-heading: 2.3rem;
+    --fs-btn: .8rem;
+
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+p {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+/* global button making css  */
+.btn {
+    background: var(--primary-bg);
+    padding: 1em 2.2em;
+    border-radius: 100vmax;
+}
+
+.btn:hover {
+    opacity: .9;
+}
+
+/* global css area end  */
+
+
+
+
+/* hero area start  */
+#hero {
+    background: url("https://websitedemos.net/outdoor-adventure-02/wp-content/uploads/sites/351/2018/11/hero-bg.jpg") right bottom;
+    background-position: fixed;
+    height: 100vh;
+    color: white;
+    position: relative;
+    z-index: 1;
+
+}
+
+#hero:before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .6);
+    z-index: -1;
+}
+
+#hero div {
+    margin: 0 2em;
+}
+
+/* navigation css start */
+#navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+
+
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo a img {
+    width: 10em;
+
+}
+
+#navbar ul {
+    display: flex;
+
+}
+
+#navbar ul li a {
+    display: block;
+    padding: 1rem 2rem;
+}
+
+/* hero main content css  */
+#hero-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+
+}
+
+.hero-content {
+    text-align: center;
+}
+
+.hero-sub-heading {
+    font-size: 1.5rem;
+    position: relative;
+
+    text-align: center;
+    display: inline-block;
+    padding-bottom: 1.2em;
+}
+
+.hero-sub-heading:before {
+    position: absolute;
+    content: "";
+    width: 3em;
+    height: 5px;
+    background: var(--primary-bg);
+    left: 46%;
+    bottom: 0;
+}
+
+@media(width<=430px) {
+    .hero-sub-heading:before {
+        left: 40%;
+    }
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: -4px;
+    margin: .5em 0 1em 0;
+}
+
+/* hero area end */
+
+/* quoation area start  */
+#quotation {
+    display: flex;
+    background: #f5f5f5;
+    height: 10em;
+    align-items: center;
+}
+@media(width<=768px){
+    #quotation{
+      flex-direction: column; 
+      height: 13em ;
+    }
+    #quotation img{
+        padding:1em 0;
+    }
+    .quote p{
+        font-size: 1.2rem;
+    }
+}
+#quotation img {
+  width: 5em;
+  height: 5em;
+margin: 0 4em;
+}
+
+.quote {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.quote p {
+    font-size: 1.6rem;
+    color: var(--paragraph-color);
+    margin-bottom: 15px;
+}
+.quote span{
+    font-size: 1.2rem;
+}
+/* quoation area end */
+
+
+/* event area start  */
+#event{
+    text-align: center;
+    padding: 7em 0;
+}
+.section-heading{
+    font-size:var(--fs-section-heading);
+    position: relative;
+    display: inline-block;
+    border: 1px solid red;
+    padding-bottom: 1em;
+}
+.section-heading:before{
+    position: absolute;
+    content: "";
+    width: 3em;
+    height: 5px;
+    background: var(--primary-bg);
+    bottom: 0;
+    left: 50%;
+    transform: translatex(-1.5em);
+}
+.event-cards{
+    display: flex;
+    padding: 3em 0;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+
+}
+@media (width<=1100px) {
+    .event-cards{
+        flex-direction: column;
+        gap: 3em;
+    }
+}
+.event-card-img img{
+width: 30em;
+box-shadow: 1em 1em #EDEDED;
+border-radius: 6px;
+}
+.event-card-content h3{
+    margin:2rem 0 1.5rem 0;
+}
+.event-card-content p{
+    margin-bottom: 2em;
+}
+/* event area end */
